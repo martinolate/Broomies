@@ -11,9 +11,9 @@ struct RoomiesView: View {
 
             ForEach(roommates.indices, id: \.self) { i in
                 HStack {
-                    Image("roommate_icon")
+                    Image("bubbles")
                         .resizable()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 80, height: 80)
 
                     TextField("Name", text: Binding(
                         get: { roommates[i] },
@@ -33,7 +33,7 @@ struct RoomiesView: View {
             Button {
                 roommates.append("")
             } label: {
-                Label("Add Roomie", systemImage: "plus")
+                Label("Add Brooomie", systemImage: "plus")
             }
             .padding(.top, 8)
 
